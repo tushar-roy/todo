@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        header i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        header .prev {
+            left: 10px;
+        }
+
+        header .next {
+            right: 10px;
+        }
+
+        header .date {
+            font-size: 18px;
+        }
+
+        #calendar {
+            display: none;
+            background-color: #fff;
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            right: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        #calendar .controls {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        footer i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #todo-list {
+            padding: 20px;
+        }
+
+        .todo-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .todo-item.completed {
+            background-color: #f0f0f0;
+            text-decoration: line-through;
+        }
+
+        .todo-item .edit-popup {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+        }
+
+        .todo-item.active .edit-popup {
+            display: block;
+        }
+
+        .todo-item input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <i class="prev">&#9664;</i>
+        <span class="date">Today's Date</span>
+        <i class="next">&#9654;</i>
+    </header>
+    
+    <div id="calendar">
+        <div class="controls">
+            <button id="cancel">Cancel</button>
+            <button id="today">Today</button>
+        </div>
+        <!-- Calendar content goes here -->
+    </div>
+    
+    <div id="todo-list">
+        <!-- To-Do items go here -->
+    </div>
+    
+    <footer>
+        <i class="add-task">➕</i>
+        <i class="copy-to-tomorrow">☰</i>
+    </footer>
+    
+    <script>
+        // JavaScript code goes here
+    </script>
+</body>
+</html>
